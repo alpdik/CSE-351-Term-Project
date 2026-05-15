@@ -17,7 +17,7 @@ int is_left = 1;
 
 %token <sval> NUMBER REGNUM LABEL
 %token MOV LOAD STORE ADDI ADD AND OR XOR BLT BGT BEQ
-%token COMMA R
+%token COMMA R TAB COLON
 
 %type <sval> expression
 
@@ -33,7 +33,7 @@ expr_list
     ;
 
 expr
-    : NUMBER DOT left_expr right_expr
+    : LABEL COLON 
     | NUMBER DOT left_expr
     ;
 

@@ -16,6 +16,7 @@
 ","        { return COMMA; }
 "R"         { return R; }
 \t			{ return TAB;}
+":"			{return COLON;}
 
 
 "mov"         { return MOV; }
